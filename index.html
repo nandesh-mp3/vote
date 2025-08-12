@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vote for Nandesh</title>
+<style>
+  :root {
+    --bg: #ffd6e8;
+    --accent: #0b1d51;
+    --card-bg: #ffffff;
+    --radius: 20px;
+    --shadow: 0 8px 24px rgba(0,0,0,0.1);
+  }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 16px;
+  }
+  .card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 24px;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: var(--shadow);
+    text-align: center;
+    overflow: hidden;
+  }
+  .car {
+    width: 200px;
+    margin: 0 auto 16px;
+    opacity: 0;
+    transform: translateX(-120%);
+    animation: carSlide 1.2s ease-out forwards;
+  }
+  @keyframes carSlide {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  h1 {
+    margin: 0;
+    font-size: 1.6em;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 0.8s;
+  }
+  p {
+    margin-top: 12px;
+    line-height: 1.4;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 1.2s;
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  .btn {
+    margin-top: 20px;
+    padding: 12px 18px;
+    font-size: 1em;
+    font-weight: 600;
+    color: white;
+    background: var(--accent);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: background 0.2s;
+  }
+  .btn:active {
+    background: #061232;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <!-- Minimal BMW-style SVG -->
+  <svg class="car" viewBox="0 0 560 300" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="none">
+      <path d="M20,140 C60,80 140,30 260,30 C380,30 460,80 520,140 L520,170 C520,190 500,200 480,200 L80,200 C60,200 40,190 40,170 Z" fill="#ffffff"/>
+      <path d="M120,70 C180,50 320,50 380,70 L390,110 C340,90 220,90 140,110 Z" fill="rgba(11,29,81,0.1)" />
+      <g transform="translate(220,145)">
+        <ellipse rx="28" ry="28" fill="#0b1d51" opacity="0.12"></ellipse>
+        <ellipse cx="60" rx="28" ry="28" fill="#0b1d51" opacity="0.12"></ellipse>
+      </g>
+      <g transform="translate(110,200)">
+        <circle cx="0" cy="0" r="30" fill="#0b1d51" opacity="0.1"></circle>
+        <circle cx="340" cy="0" r="30" fill="#0b1d51" opacity="0.1"></circle>
+      </g>
+    </g>
+  </svg>
+
+  <h1>Hey, I’m Nandesh.</h1>
+  <p>I want to be your next Class Leader.  
+     I’ll make sure our class is fair, fun, and heard — no empty promises, only action.  
+     Let’s drive our class forward, together.</p>
+  <button class="btn" onclick="alert('Vote for Nandesh — Fairness. Fun. Results.')">Vote for Me</button>
+</div>
+
+</body>
+</html>
